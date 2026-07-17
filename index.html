@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#7b5015" />
+    <meta
+      name="description"
+      content="The wedding celebration of Janny Ruteraho and Catherine Wannyana."
+    />
+    <title>Janny & Catherine | Wedding Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Great+Vibes&family=Marcellus&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="invitation-shell" aria-labelledby="invitation-title">
+        <div class="frame frame-one" aria-hidden="true"></div>
+        <div class="frame frame-two" aria-hidden="true"></div>
+        <div class="botanical botanical-top" aria-hidden="true">❦</div>
+        <div class="botanical botanical-bottom" aria-hidden="true">❦</div>
+
+        <div class="invitation-intro">
+          <p class="eyebrow">With grateful hearts</p>
+          <p class="personal-greeting">Dear <span id="guest-name">Guest</span>,</p>
+          <p class="invitation-copy">together with their families,</p>
+          <p class="invitation-copy">request the pleasure of your company</p>
+          <p class="invitation-copy">at the wedding celebration of</p>
+
+          <div class="ornament" aria-hidden="true"><span>✦</span></div>
+          <h1 id="invitation-title">
+            <span>Janny Ruteraho</span>
+            <b>&amp;</b>
+            <span>Catherine Wannyana</span>
+          </h1>
+          <p class="script-line">Cordially invite you</p>
+          <div class="ornament ornament-small" aria-hidden="true"><span>♥</span></div>
+
+          <div class="date-lockup">
+            <span>Saturday</span>
+            <strong>25</strong>
+            <span>July 2026</span>
+          </div>
+          <p class="location-summary">Konge, Kampala</p>
+
+          <div class="countdown" aria-label="Countdown to the wedding">
+            <p>Counting down to forever</p>
+            <div class="countdown-grid" id="countdown" aria-live="polite">
+              <span><b id="days">00</b><small>Days</small></span>
+              <span><b id="hours">00</b><small>Hours</small></span>
+              <span><b id="minutes">00</b><small>Minutes</small></span>
+              <span><b id="seconds">00</b><small>Seconds</small></span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button button-gold" href="#celebration">View celebration details</a>
+            <button class="button button-plain" type="button" data-card-open>View the printed card</button>
+          </div>
+        </div>
+
+        <figure class="card-preview">
+          <button type="button" data-card-open aria-label="Open the full wedding invitation card">
+            <img src="InvitationCard.jpeg" alt="The printed wedding invitation for Janny Ruteraho and Catherine Wannyana" />
+            <span>Tap to view the invitation card</span>
+          </button>
+        </figure>
+      </section>
+
+      <section class="details-section" id="celebration" aria-labelledby="celebration-heading">
+        <div class="section-heading">
+          <p class="eyebrow">A day of joy</p>
+          <h2 id="celebration-heading">Celebrate with us</h2>
+          <div class="ornament ornament-small" aria-hidden="true"><span>♥</span></div>
+        </div>
+
+        <div class="schedule">
+          <article class="schedule-card">
+            <div class="schedule-icon" aria-hidden="true">⌂</div>
+            <p class="schedule-label">Marriage ceremony</p>
+            <h3>St Denis Konge Catholic Parish</h3>
+            <p>Saturday, 25 July 2026<br /><strong>5:00 p.m.</strong></p>
+            <a class="text-link" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=St%20Denis%20Konge%20Catholic%20Parish">Open ceremony map <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="schedule-card">
+            <div class="schedule-icon" aria-hidden="true">✦</div>
+            <p class="schedule-label">Wedding dinner &amp; reception</p>
+            <h3>Chocolate Hotel, Konge</h3>
+            <p>Saturday, 25 July 2026<br /><strong>6:00 p.m.</strong></p>
+            <a class="text-link" target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=Chocolate%20Hotel%20Konge">Open reception map <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+
+        <div class="action-panel">
+          <div>
+            <p class="eyebrow">Kindly reply by WhatsApp</p>
+            <h2>Your presence is a cherished blessing.</h2>
+            <p id="rsvp-contact" class="rsvp-contact"></p>
+          </div>
+          <div class="panel-buttons">
+            <a id="rsvp-link" class="button button-gold" target="_blank" rel="noreferrer" href="#">RSVP on WhatsApp</a>
+            <button id="calendar-button" class="button button-plain" type="button">Add to calendar</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="note-section" aria-label="Closing note">
+        <div class="note-card">
+          <div class="ornament" aria-hidden="true"><span>♥</span></div>
+          <p>
+            We look forward to sharing this joyful occasion with you and creating
+            memories to treasure for a lifetime.
+          </p>
+          <p class="script-line">With love, Janny &amp; Catherine</p>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="card-dialog" id="card-dialog" aria-label="Full wedding invitation card">
+      <button class="dialog-close" type="button" data-card-close aria-label="Close invitation card">×</button>
+      <img src="InvitationCard.jpeg" alt="Full printed wedding invitation" />
+      <a class="button button-gold" href="InvitationCard.jpeg" download>Download the card</a>
+    </dialog>
+
+    <script src="guests.js"></script>
+    <script src="site.js"></script>
+  </body>
+</html>

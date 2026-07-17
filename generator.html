@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#7b5015" />
+    <title>Guest Link Generator | Janny & Catherine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700&family=Marcellus&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .generator-page { max-width: 940px; margin: 0 auto; padding: clamp(2.5rem, 8vw, 5rem) 1.25rem; }
+      .generator-header { margin-bottom: 2rem; text-align: center; }
+      .generator-header p { max-width: 40rem; margin: 0.8rem auto 0; font-size: 1.15rem; }
+      .generator-card { padding: clamp(1.3rem, 4vw, 2.5rem); border: 1px solid rgba(142, 91, 20, 0.56); background: rgba(255, 251, 240, 0.72); box-shadow: var(--shadow); }
+      label { display: block; margin: 1.1rem 0 0.4rem; color: var(--deep-gold); font-family: Marcellus, Georgia, serif; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; }
+      input, textarea { width: 100%; border: 1px solid rgba(142, 91, 20, 0.58); border-radius: 0; padding: 0.8rem; color: var(--ink); background: #fffaf0; font: inherit; font-size: 1rem; }
+      textarea { min-height: 12rem; resize: vertical; }
+      .generator-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem; }
+      .generator-output { display: grid; gap: 1.25rem; margin-top: 1.5rem; }
+      .output-card { position: relative; padding: 1.25rem; border-left: 3px solid var(--gold); background: rgba(244, 222, 181, 0.55); }
+      .output-card h2 { font-size: 1.42rem; }
+      pre { max-height: 22rem; margin: 0.75rem 0; overflow: auto; padding: 0.9rem; color: #442b13; background: #fffaf0; font: 0.86rem/1.5 Consolas, monospace; white-space: pre-wrap; word-break: break-word; }
+      .copy-status { min-height: 1.2em; margin: 0.7rem 0 0; color: var(--deep-gold); font-style: italic; }
+      .back-link { display: inline-block; margin-top: 2rem; color: var(--deep-gold); }
+    </style>
+  </head>
+  <body>
+    <main class="generator-page">
+      <header class="generator-header">
+        <p class="eyebrow">Wedding invitation</p>
+        <h1>Guest Link Generator</h1>
+        <p>Paste one guest name per line. This creates a clean personal code, a shareable invitation link, and the entries for <code>guests.js</code>.</p>
+      </header>
+
+      <section class="generator-card" aria-label="Guest invitation link generator">
+        <label for="invite-url">Base invitation URL</label>
+        <input id="invite-url" type="url" />
+        <label for="guest-list">Guest names</label>
+        <textarea id="guest-list" placeholder="Gideon Kalanzi&#10;Aisha Namusoke&#10;Mr and Mrs Ssemanda"></textarea>
+        <div class="generator-actions">
+          <button id="generate" class="button button-gold" type="button">Generate guest links</button>
+          <button id="clear" class="button button-plain" type="button">Clear list</button>
+        </div>
+      </section>
+
+      <section id="generator-output" class="generator-output" hidden aria-live="polite">
+        <article class="output-card">
+          <h2>Personalized invitation links</h2>
+          <pre id="links-output"></pre>
+          <button class="button button-plain" type="button" data-copy="links-output">Copy all links</button>
+        </article>
+        <article class="output-card">
+          <h2>Entries for guests.js</h2>
+          <p>Copy these lines inside the <code>guests</code> object, keeping the commas.</p>
+          <pre id="entries-output"></pre>
+          <button class="button button-plain" type="button" data-copy="entries-output">Copy guest entries</button>
+        </article>
+        <p class="copy-status" id="copy-status"></p>
+      </section>
+
+      <a class="back-link" href="index.html">← Return to the invitation</a>
+    </main>
+    <script src="generator.js"></script>
+  </body>
+</html>
