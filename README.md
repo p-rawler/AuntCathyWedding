@@ -52,6 +52,7 @@ Codes should be lowercase and use hyphens instead of spaces.
 4. Copy the personalized URLs to share and copy the generated entries into the `guests` object in `guests.js`.
 
 The generator makes clean lowercase codes and adds `-2`, `-3`, and so on if two names would make the same code.
+It automatically remembers the pasted guest list and its generated links in the same browser on the same device, so they reappear after a refresh. On a first visit, it preloads the names already in `guests.js`. Select **Clear list** to remove the locally saved list.
 
 ## Host as a static site
 

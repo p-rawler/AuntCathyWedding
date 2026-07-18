@@ -18,6 +18,7 @@
       input, textarea { width: 100%; border: 1px solid rgba(142, 91, 20, 0.58); border-radius: 0; padding: 0.8rem; color: var(--ink); background: #fffaf0; font: inherit; font-size: 1rem; }
       textarea { min-height: 12rem; resize: vertical; }
       .generator-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem; }
+      .save-note { margin: 0.85rem 0 0; color: var(--muted-ink); font-size: 1rem; font-style: italic; }
       .generator-output { display: grid; gap: 1.25rem; margin-top: 1.5rem; }
       .output-card { position: relative; padding: 1.25rem; border-left: 3px solid var(--gold); background: rgba(244, 222, 181, 0.55); }
       .output-card h2 { font-size: 1.42rem; }
@@ -31,7 +32,7 @@
       <header class="generator-header">
         <p class="eyebrow">Wedding invitation</p>
         <h1>Guest Link Generator</h1>
-        <p>Paste one guest name per line. This creates a clean personal code, a shareable invitation link, and the entries for <code>guests.js</code>.</p>
+        <p>Paste one guest name per line. This creates a clean personal code, a shareable invitation link, and the entries for <code>guests.js</code>. Your list and generated links stay here after a refresh on this device.</p>
       </header>
 
       <section class="generator-card" aria-label="Guest invitation link generator">
@@ -43,6 +44,7 @@
           <button id="generate" class="button button-gold" type="button">Generate guest links</button>
           <button id="clear" class="button button-plain" type="button">Clear list</button>
         </div>
+        <p class="save-note">Your guest list is saved automatically in this browser. Use <strong>Clear list</strong> only when you want to remove it.</p>
       </section>
 
       <section id="generator-output" class="generator-output" hidden aria-live="polite">
@@ -62,6 +64,7 @@
 
       <a class="back-link" href="index.html">← Return to the invitation</a>
     </main>
+    <script src="guests.js"></script>
     <script src="generator.js"></script>
   </body>
 </html>
