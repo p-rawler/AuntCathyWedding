@@ -12,5 +12,5 @@ const guests = {
   "mr-and-mrs-kiggundu": "Mr and Mrs Kiggundu",
   "mr-and-mrs-bwize": "Mr and Mrs Bwize",
   "mr-and-mrs-mukalazi": "Mr and Mrs Mukalazi",
-  "mr-and-mrs-ssentongo": "Mr and Mrs Ssentongo"
+  "mr-and-mrs-ssentongo": "Mr and Mrs Ssentongo",
 };
