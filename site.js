@@ -1,8 +1,8 @@
 const wedding = {
   startsAt: new Date("2026-07-25T17:00:00+03:00"),
   couple: "Mr. Janny Ruteraho and Ms. Cathy Wannyana",
-  rsvpNumber: "256700000000", // Replace with the real WhatsApp number, digits only.
-  rsvpDisplay: "+256 700 000 000", // Replace this at the same time as rsvpNumber.
+  rsvpNumber: "256782931644", // Replace with the real WhatsApp number, digits only.
+  rsvpDisplay: "+256 782 931 644 Cathy Wannyana", // Replace this at the same time as rsvpNumber.
   ceremonyLocation: "St Denis Konge Catholic Parish",
   receptionLocation: "Chocolate Hotel, Konge"
 };
