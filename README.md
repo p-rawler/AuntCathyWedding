@@ -1,4 +1,4 @@
-# Janny & Catherine Wedding Invitation
+# Janny & Cathy Wedding Invitation
 
 A polished, responsive static wedding invitation inspired by the supplied ivory, antique-gold, floral printed card. It includes personalized guest greetings, countdown, schedule, maps, a WhatsApp RSVP action, an iCalendar download, and a guest-link generator.
 

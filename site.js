@@ -1,6 +1,6 @@
 const wedding = {
   startsAt: new Date("2026-07-25T17:00:00+03:00"),
-  couple: "Janny Ruteraho and Catherine Wannyana",
+  couple: "Mr. Janny Ruteraho and Ms. Cathy Wannyana",
   rsvpNumber: "256700000000", // Replace with the real WhatsApp number, digits only.
   rsvpDisplay: "+256 700 000 000", // Replace this at the same time as rsvpNumber.
   ceremonyLocation: "St Denis Konge Catholic Parish",
@@ -15,9 +15,9 @@ function guestFromUrl() {
 function setGuestDetails() {
   const guest = guestFromUrl();
   document.getElementById("guest-name").textContent = guest;
-  document.title = `${guest} | Janny & Catherine's Wedding Invitation`;
+  document.title = `${guest} | Janny & Cathy's Wedding Invitation`;
 
-  const message = `Hello, this is ${guest}. I am responding to the wedding invitation for Janny Ruteraho and Catherine Wannyana on 25 July 2026. My RSVP is: `;
+  const message = `Hello, this is ${guest}. I am responding to the wedding invitation for Mr. Janny Ruteraho and Ms. Cathy Wannyana on 25 July 2026. My RSVP is: `;
   document.getElementById("rsvp-link").href = `https://wa.me/${wedding.rsvpNumber}?text=${encodeURIComponent(message)}`;
   document.getElementById("rsvp-contact").textContent = `RSVP via WhatsApp: ${wedding.rsvpDisplay}`;
 }
@@ -52,7 +52,7 @@ function downloadCalendarEvent() {
   const calendar = [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//Janny and Catherine Wedding//EN",
+    "PRODID:-//Janny and Cathy Wedding//EN",
     "BEGIN:VEVENT",
     `UID:janny-catherine-wedding-20260725@invitation`,
     `DTSTAMP:${stamp}`,
